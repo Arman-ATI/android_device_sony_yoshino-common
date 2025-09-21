@@ -10,6 +10,9 @@ $(CUSTOMIZATION_MODEM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 ifeq ($(TARGET_DEVICE),lilac)
 	$(hide) ln -sf amss_fsg_lilac_tar.mbn $@/default
 endif
+ifeq ($(TARGET_DEVICE),lilac_dcm)
+	$(hide) ln -sf amss_fsg_lilac_tar.mbn $@/default
+endif
 ifeq ($(TARGET_DEVICE),poplar)
 	$(hide) ln -sf amss_fsg_poplar_tar.mbn $@/default
 endif
