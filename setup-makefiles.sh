@@ -28,7 +28,7 @@ source "${HELPER}"
 setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true
 
 # Warning headers and guards
-write_headers "lilac maple maple_dsds poplar poplar_canada poplar_dsds poplar_kddi"
+write_headers "lilac lilac_dcm maple maple_dsds poplar poplar_canada poplar_dsds poplar_kddi"
 
 write_makefiles "${MY_DIR}"/proprietary-files.txt true
 write_makefiles "${MY_DIR}"/proprietary-files-vendor.txt true
