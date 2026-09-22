@@ -284,6 +284,7 @@ PRODUCT_COPY_FILES += \
 
 # WiFi firmware symlinks
 PRODUCT_PACKAGES += \
+    firmware_wlan_bdwlan.bin_symlink \
     firmware_wlan_mac.bin_symlink \
     firmware_WCNSS_qcom_cfg.ini_symlink
 
