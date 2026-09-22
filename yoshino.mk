@@ -51,6 +51,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl:32
 
+$(call inherit-product-if-exists, vendor/sony/camera/sony-camera.mk)
+
 # Configstore
 PRODUCT_PACKAGES += \
     disable_configstore

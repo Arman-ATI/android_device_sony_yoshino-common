@@ -95,7 +95,6 @@ vendor/lib/hw/camera.msm8998.so
 vendor/lib/hw/camera.qcom.so
 vendor/lib/libcameralight.so
 vendor/lib/libcammw.so
-vendor/lib/libcammw_util.so
 vendor/lib/libcdsprpc.so
 vendor/lib/libchromaflash.so
 vendor/lib/libdepthmapwrapper.so
@@ -271,7 +270,6 @@ vendor/lib/libsomc_canelersc.so
 vendor/lib/libsomc_cheesescone.so
 vendor/lib/libsomc_cheesesconersc.so
 vendor/lib/libsomc_chokoballcmn.so
-vendor/lib/libsomc_chokoballpal.so
 vendor/lib/libsomc_dars.so
 vendor/lib/libsomc_darsrsc.so
 vendor/lib/libsomc_marble.so
@@ -301,13 +299,7 @@ vendor/lib/libsony_naruto.so
 vendor/lib/vendor.somc.camera.device@3.2-impl.so
 vendor/lib/vendor.somc.camera.device@3.3-impl.so
 vendor/lib/vendor.somc.camera.device@3.4-impl.so
-vendor/lib/vendor.somc.hardware.camera.cacao@1.0.so
-vendor/lib/vendor.somc.hardware.camera.cacao@2.0.so
 vendor/lib/vendor.somc.hardware.camera.cacao@3.0-impl.so
-vendor/lib/vendor.somc.hardware.camera.cacao@3.0.so
-vendor/lib/vendor.somc.hardware.camera.cacao@3.1.so
-vendor/lib/vendor.somc.hardware.camera.device@1.0.so
-vendor/lib/vendor.somc.hardware.camera.provider@1.0.so
 
 # Camera (sensors)
 vendor/camera/SOI20BS2/color_ctrl.dat
