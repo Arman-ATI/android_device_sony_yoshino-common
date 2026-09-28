@@ -27,6 +27,11 @@
 import /vendor/etc/init/hw/init.qcom.usb.rc
 
 on early-init
+    # No metadata partition: aconfigd (flag storage), apexd and bootstat need a
+    # writable /metadata. This runs before aconfigd.rc early-init (imported by init.rc).
+    mount tmpfs tmpfs /metadata nosuid nodev noexec mode=0771,uid=0,gid=0
+    restorecon /metadata
+
     mount debugfs debugfs /sys/kernel/debug
     chmod 0755 /sys/kernel/debug
 

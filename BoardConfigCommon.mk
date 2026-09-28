@@ -67,6 +67,9 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_USERIMAGES_USE_EXT4 := true
 
+# No metadata partition on yoshino; /metadata is a tmpfs mounted in init.qcom.rc
+BOARD_ROOT_EXTRA_FOLDERS := metadata
+
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := msm8998
