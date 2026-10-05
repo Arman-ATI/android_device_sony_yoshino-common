@@ -32,6 +32,9 @@ TARGET_NO_BOOTLOADER := true
 # Camera
 MALLOC_SVELTE_FOR_LIBC32 := true
 
+# Display
+TARGET_HAS_WIDE_COLOR_DISPLAY := true
+
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
