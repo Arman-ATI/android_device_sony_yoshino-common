@@ -88,4 +88,10 @@
     <!-- Whether device needs to wait for Qualcomm MPCTL service to start
          before setting power profiles on boot. -->
     <bool name="config_waitForMpctlOnBoot">true</bool>
+
+    <!-- Keep screen-off fingerprint unlock disabled. While the screen is off the
+         fingerprint session stays armed, and on this power-button sensor the
+         interrupt line can stay latched after a rejected touch, which leaves
+         fingerprint unresponsive until the HAL is restarted. -->
+    <bool name="config_fingerprintWakeAndUnlock">false</bool>
 </resources>
