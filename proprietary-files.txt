@@ -907,7 +907,6 @@ system_ext/lib64/lib-imsvtutils.so|dfc5cf0854fe38c191a53ec3bd2a322d05d85567
 system_ext/lib64/libimscamera_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so|114876ec8ba85965a69694a7edc0e555fe099061
 system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so|b90664b4ce069358f36801da5ceac10baf4ebcc6
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|4cf9e97f526c6278c5e2136e00d1fb800fb941aa
-system_ext/priv-app/ims/ims.apk|5340ba42c0108de7d7bad44f48492fd06bd1f91f
 vendor/bin/ims_rtp_daemon|32a3ce381b0f85f53a2e9afd7215b3585afef0d6
 vendor/bin/imsdatadaemon|3f044f84eb4049f1ce8a26af6a6026c1776d22dd
 vendor/bin/imsqmidaemon|756dcc2d6c7fa26916bc28dedf0c513b1d5e5bfe
