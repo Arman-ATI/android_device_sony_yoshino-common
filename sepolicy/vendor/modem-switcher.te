@@ -12,14 +12,8 @@ hwbinder_use(modem-switcher)
 # Allow binder communication with hal_miscta_default
 binder_call(modem-switcher, hal_miscta_default)
 
-# Allow binder communication with hal_modemswitcher_default
-binder_call(modem-switcher, hal_modemswitcher_default)
-
 # Allow modem-switcher to find hal_miscta_default
 allow modem-switcher hal_miscta_hwservice:hwservice_manager find;
-
-# Allow modem-switcher to find hal_modemswitcher_default
-allow modem-switcher hal_modemswitcher_hwservice:hwservice_manager find;
 
 # Allow modem-switcher to find hidl_memory
 allow modem-switcher hidl_memory_hwservice:hwservice_manager find;
@@ -45,6 +39,3 @@ get_prop(modem-switcher, hwservicemanager_prop)
 
 # Allow modem-switcher to get vendor_radio_prop
 get_prop(modem-switcher, vendor_radio_prop)
-
-# Allow modem-switcher to set sony_modemswitcher_prop
-set_prop(modem-switcher, sony_modemswitcher_prop)
