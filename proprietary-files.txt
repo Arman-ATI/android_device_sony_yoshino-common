@@ -726,6 +726,7 @@ vendor/etc/media_profiles_V1_0.xml
 
 # Modem switcher
 system/bin/sony-modem-switcher:vendor/bin/sony-modem-switcher
+system/etc/customization/modem/amss_fs_empty.mbn:vendor/etc/customization/modem/amss_fs_empty.mbn;SYMLINK=vendor/etc/customization/modem/reset_modemst1,vendor/etc/customization/modem/reset_modemst2
 
 # NFC firmware
 vendor/lib/libpn553_fw.so:vendor/lib64/libpn553_fw.so
