@@ -22,20 +22,16 @@ allow modem-switcher hidl_memory_hwservice:hwservice_manager find;
 allow modem-switcher vendor_data_file:dir rw_dir_perms;
 allow modem-switcher vendor_data_file:file create_file_perms;
 
-# Allow modem-switcher to read files in /oem
-r_dir_file(modem-switcher, oemfs)
+# Allow modem-switcher to search /dev/block/by-name
+allow modem-switcher block_device:dir r_dir_perms;
 
-# Allow modem-switcher to read files in /vendor
-r_dir_file(modem-switcher, vendor_file)
+# Allow modem-switcher to write the fsg and modemst partitions
+allow modem-switcher modem_efs_partition_device:blk_file { open read write getattr ioctl };
 
-# Allow modem-switcher to get cust_system_prop
-get_prop(modem-switcher, cust_system_prop)
+# Label the status and report files in /data/vendor as modemsw_data_file
+type_transition modem-switcher vendor_data_file:file modemsw_data_file "modem_switcher_report";
+type_transition modem-switcher vendor_data_file:file modemsw_data_file "modem_switcher_status";
+allow modem-switcher modemsw_data_file:file create_file_perms;
 
-# Allow modem-switcher to get cust_debug_system_prop
-get_prop(modem-switcher, cust_debug_system_prop)
-
-# Allow modem-switcher to get hwservicemanager_prop
-get_prop(modem-switcher, hwservicemanager_prop)
-
-# Allow modem-switcher to get vendor_radio_prop
-get_prop(modem-switcher, vendor_radio_prop)
+# Allow modem-switcher to chown the files it creates in /data/vendor
+allow modem-switcher self:capability chown;

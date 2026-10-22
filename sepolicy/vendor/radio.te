@@ -1,0 +1,10 @@
+# Allow CustomizationSelector (android.phone) to read the modem switcher status in /data/vendor
+allow radio modemsw_data_file:file r_file_perms;
+
+# CustomizationSelector (android.phone) 經 libMiscTAApi 讀寫 TA
+hwbinder_use(radio)
+binder_call(radio, hal_miscta_default)
+allow radio hal_miscta_hwservice:hwservice_manager find;
+
+# Allow radio (CustomizationSelector) to access the modem diag device to write EFS files
+allow radio diag_device:chr_file { open read write ioctl getattr };
