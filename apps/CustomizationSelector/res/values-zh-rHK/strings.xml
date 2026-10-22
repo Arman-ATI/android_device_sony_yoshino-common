@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="customization_restart_desc_txt">您的裝置現在將重新啟動以針對您的網絡供應商最佳化。</string>
+    <string name="carrier_cht">中華電信</string>
+    <string name="carrier_fet">遠傳電信</string>
+    <string name="carrier_twm">台灣大哥大</string>
+    <string name="carrier_tstar">台灣之星</string>
+    <string name="carrier_apt">亞太電信</string>
+    <string name="carrier_factory">原廠預設</string>
+    <string name="carrier_default">預設</string>
+    <string name="carrier_sim_auto">SIM 自動</string>
+    <string name="debug_button_txt">還原初始 modem 與狀態</string>
+    <string name="debug_current_modem_txt">目前 modem</string>
+    <string name="debug_initial_modem_txt">初始 modem</string>
+    <string name="debug_swap_modem_txt">切換 modem</string>
+    <string name="debug_verify_text">要套用 %1$s 嗎？</string>
+    <string name="debug_verify_title">確認 modem 選擇</string>
+    <string name="search_modem">搜尋 modem</string>
+    <string name="manual_current">目前 modem：%1$s\n設定 ID：%2$s</string>
+    <string name="manual_button">套用並重新啟動</string>
+    <string name="manual_confirm">要套用 %1$s 並重新啟動裝置嗎？</string>
+    <string name="manual_missing">找不到 modem 檔案：%1$s</string>
+    <string name="manual_failed">寫入設定失敗</string>
+    <string name="manual_nochange">目前已是此設定</string>
+    <string name="manual_app_name">電信切換</string>
+    <string name="manual_efs_title">套用 EFS 檔案</string>
+    <string name="manual_efs_working">準備中…</string>
+    <string name="manual_efs_wait">EFS 已寫入，%1$d 秒後重新啟動…</string>
+    <string name="manual_efs_failed">寫入 EFS 檔案失敗（已還原）</string>
+    <string name="manual_efs_note">（EFS 模式）</string>
+    <string name="manual_current_efs">目前 modem：%1$s\n%2$s\n基底 modem：\n%3$s\n設定 ID：%4$s</string>
+    <string name="manual_mode_fsg">寫入模式：相容（原廠模式）</string>
+    <string name="manual_mode_efs">寫入模式：不相容（EFS 模式）</string>
+    <string name="manual_check_compatible">相容模式</string>
+    <string name="manual_mode_forced">（手動指定）</string>
+    <string name="manual_force_warning">此檔案的卡數與本機不同，強制相容模式可能導致無服務。</string>
+    <string name="manual_mcc_invalid">MCC 格式不正確：請輸入 3 位數的 MCC，以空白分隔</string>
+    <string name="manual_mcc_missing">讀不到 SIM 的 MCC（沒有 SIM？）</string>
+    <string name="efs_progress_backup">備份目前 EFS（%1$d 個檔案）…</string>
+    <string name="efs_progress_write">寫入 %1$s（%2$d 個檔案）…</string>
+    <string name="efs_progress_write_mcc">寫入 %1$s（%2$d 個檔案，operator_mcc_list=%3$s）…</string>
+    <string name="efs_progress_restore">寫入失敗，還原 EFS …</string>
+    <string name="manual_check_ignore">忽略檢查</string>
+    <string name="manual_mcc_label">operator_mcc_list</string>
+    <string name="manual_menu_detect">偵測選項</string>
+    <string name="manual_menu_notification">狀態通知</string>
+    <string name="manual_menu_auto_detect">自動偵測電信</string>
+    <string name="status_channel_name">電信切換狀態</string>
+    <string name="status_line_status">狀態：%1$s</string>
+    <string name="status_line_config">設定：%1$s</string>
+    <string name="status_line_cust">客製化 ID：%1$s</string>
+    <string name="status_disable_notification">關閉通知</string>
+</resources>

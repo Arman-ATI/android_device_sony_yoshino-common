@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="customization_restart_desc_txt">现在您的设备将重新启动以对网络运营商进行优化。</string>
+    <string name="carrier_cht">中华电信</string>
+    <string name="carrier_fet">远传电信</string>
+    <string name="carrier_twm">台湾大哥大</string>
+    <string name="carrier_tstar">台湾之星</string>
+    <string name="carrier_apt">亚太电信</string>
+    <string name="carrier_factory">原厂默认</string>
+    <string name="carrier_default">默认</string>
+    <string name="carrier_sim_auto">SIM 自动</string>
+    <string name="debug_button_txt">还原初始 modem 与状态</string>
+    <string name="debug_current_modem_txt">当前 modem</string>
+    <string name="debug_initial_modem_txt">初始 modem</string>
+    <string name="debug_swap_modem_txt">切换 modem</string>
+    <string name="debug_verify_text">要应用 %1$s 吗？</string>
+    <string name="debug_verify_title">确认 modem 选择</string>
+    <string name="search_modem">搜索 modem</string>
+    <string name="manual_current">当前 modem：%1$s\n配置 ID：%2$s</string>
+    <string name="manual_button">应用并重新启动</string>
+    <string name="manual_confirm">要应用 %1$s 并重新启动设备吗？</string>
+    <string name="manual_missing">找不到 modem 文件：%1$s</string>
+    <string name="manual_failed">写入配置失败</string>
+    <string name="manual_nochange">当前已是此配置</string>
+    <string name="manual_app_name">运营商切换</string>
+    <string name="manual_efs_title">应用 EFS 文件</string>
+    <string name="manual_efs_working">准备中…</string>
+    <string name="manual_efs_wait">EFS 已写入，%1$d 秒后重新启动…</string>
+    <string name="manual_efs_failed">写入 EFS 文件失败（已还原）</string>
+    <string name="manual_efs_note">（EFS 模式）</string>
+    <string name="manual_current_efs">当前 modem：%1$s\n%2$s\n基底 modem：\n%3$s\n配置 ID：%4$s</string>
+    <string name="manual_mode_fsg">写入模式：兼容（原厂模式）</string>
+    <string name="manual_mode_efs">写入模式：不兼容（EFS 模式）</string>
+    <string name="manual_check_compatible">兼容模式</string>
+    <string name="manual_mode_forced">（手动指定）</string>
+    <string name="manual_force_warning">此文件的卡数与本机不同，强制兼容模式可能导致无服务。</string>
+    <string name="manual_mcc_invalid">MCC 格式不正确：请输入 3 位数的 MCC，以空格分隔</string>
+    <string name="manual_mcc_missing">读不到 SIM 的 MCC（没有 SIM？）</string>
+    <string name="efs_progress_backup">备份当前 EFS（%1$d 个文件）…</string>
+    <string name="efs_progress_write">写入 %1$s（%2$d 个文件）…</string>
+    <string name="efs_progress_write_mcc">写入 %1$s（%2$d 个文件，operator_mcc_list=%3$s）…</string>
+    <string name="efs_progress_restore">写入失败，还原 EFS …</string>
+    <string name="manual_check_ignore">忽略检查</string>
+    <string name="manual_mcc_label">operator_mcc_list</string>
+    <string name="manual_menu_detect">检测选项</string>
+    <string name="manual_menu_notification">状态通知</string>
+    <string name="manual_menu_auto_detect">自动检测运营商</string>
+    <string name="status_channel_name">运营商切换状态</string>
+    <string name="status_line_status">状态：%1$s</string>
+    <string name="status_line_config">配置：%1$s</string>
+    <string name="status_line_cust">定制 ID：%1$s</string>
+    <string name="status_disable_notification">关闭通知</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- CustomizationSelector 存取 /dev/diag（group oem_2901）讀寫 modem EFS 所需的 group。
+     IPC router 的 diag 服務需要 app 具備此 group，否則回傳錯誤回應（DIAG_CMD_ERROR）。 -->
+<permissions>
+    <permission name="com.sonymobile.customizationselector.permission.DIAG_EFS" >
+        <group gid="oem_2901" />
+    </permission>
+</permissions>

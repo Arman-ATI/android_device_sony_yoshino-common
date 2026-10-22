@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CustomizationSelector</string>
+    <string name="customization_restart_desc_txt">Your device will now restart to be optimized for your network operator.</string>
+    <string name="debug_button_txt">Restore initial modem and state</string>
+    <string name="debug_current_modem_txt">Current modem</string>
+    <string name="debug_initial_modem_txt">Initial modem</string>
+    <string name="debug_swap_modem_txt">Switch modem</string>
+    <string name="debug_verify_text">Do you want to apply %1$s?</string>
+    <string name="debug_verify_title">Verify modem selection</string>
+    <string name="reboot_reason">CustomizationSelector will reboot device to apply new configuration</string>
+    <string name="reboot_reason_modem_debug">Debugmenu - CustomizationSelector will reboot device to apply new modem</string>
+    <string name="search_modem">Search modem</string>
+    <string name="manual_current">Current modem: %1$s\nConfig id: %2$s</string>
+    <string name="manual_button">Apply and reboot</string>
+    <string name="manual_confirm">Apply %1$s and reboot the device?</string>
+    <string name="manual_missing">Modem file not found: %1$s</string>
+    <string name="manual_failed">Failed to write the configuration</string>
+    <string name="manual_nochange">This configuration is already active</string>
+    <string name="manual_app_name">Carrier switch</string>
+    <string name="manual_efs_title">Applying EFS files</string>
+    <string name="manual_efs_working">Preparing…</string>
+    <string name="manual_efs_wait">EFS written. Rebooting in %1$d s…</string>
+    <string name="manual_efs_failed">Failed to write EFS files (restored)</string>
+    <string name="manual_efs_note">(EFS mode)</string>
+    <string name="manual_current_efs">Current modem: %1$s\n%2$s\nBase modem:\n%3$s\nConfig id: %4$s</string>
+    <string name="manual_mode_fsg">Write mode: compatible (stock mode)</string>
+    <string name="manual_mode_efs">Write mode: incompatible (EFS mode)</string>
+    <string name="manual_check_compatible">Compatible mode</string>
+    <string name="manual_mode_forced"> (manual)</string>
+    <string name="manual_force_warning">The file\'s SIM count differs from this device. Forcing compatible mode may cause no service.</string>
+    <string name="manual_mcc_invalid">Invalid MCC list: use 3-digit MCCs separated by spaces</string>
+    <string name="manual_mcc_missing">Cannot read the SIM\'s MCC (no SIM?)</string>
+    <string name="carrier_cht">Chunghwa Telecom</string>
+    <string name="carrier_fet">Far EasTone</string>
+    <string name="carrier_twm">Taiwan Mobile</string>
+    <string name="carrier_tstar">T Star</string>
+    <string name="carrier_apt">Asia Pacific Telecom</string>
+    <string name="carrier_factory">Factory default</string>
+    <string name="carrier_default">Default</string>
+    <string name="carrier_sim_auto">SIM auto</string>
+    <string name="efs_progress_backup">Backing up current EFS (%1$d files)…</string>
+    <string name="efs_progress_write">Writing %1$s (%2$d files)…</string>
+    <string name="efs_progress_write_mcc">Writing %1$s (%2$d files, operator_mcc_list=%3$s)…</string>
+    <string name="efs_progress_restore">Write failed, restoring EFS…</string>
+    <string name="manual_check_ignore">Ignore check</string>
+    <string name="manual_mcc_label">operator_mcc_list</string>
+    <string name="manual_menu_detect">Detection options</string>
+    <string name="manual_menu_notification">Status notification</string>
+    <string name="manual_menu_auto_detect">Auto-detect carrier</string>
+    <string name="status_channel_name">Carrier switch status</string>
+    <string name="status_line_status">Status: %1$s</string>
+    <string name="status_line_config">Config: %1$s</string>
+    <string name="status_line_cust">Cust ID: %1$s</string>
+    <string name="status_disable_notification">Turn off notification</string>
+</resources>

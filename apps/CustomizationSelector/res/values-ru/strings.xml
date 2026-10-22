@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="customization_restart_desc_txt">Ваше устройство будет перезапущено в целях оптимизации для сетевого оператора.</string>
+</resources>

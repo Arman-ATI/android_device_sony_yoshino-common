@@ -292,5 +292,14 @@ PRODUCT_PACKAGES += \
     firmware_wlan_mac.bin_symlink \
     firmware_WCNSS_qcom_cfg.ini_symlink
 
+# CustomizationSelector: group grant for /dev/diag (oem_2901) to write modem EFS files
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/permissions/com.sonymobile.customizationselector.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.sonymobile.customizationselector.xml \
+    $(LOCAL_PATH)/permissions/privapp-permissions-customizationselector.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-customizationselector.xml
+
+# Carrier switch app (TA switch, or EFS files when the modem config is incompatible)
+PRODUCT_PACKAGES += \
+    CustomizationSelector
+
 # Inherit proprietary blobs
 $(call inherit-product, vendor/sony/yoshino-common/yoshino-common-vendor.mk)

@@ -55,3 +55,4 @@ persist.timed.enable=true
 # Wireless display
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
+ro.semc.version.opencs=1

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 電信切換：初始 / 目前 modem、可搜尋的 modem 清單、寫入模式與選項 -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/manual_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:theme="@style/AppTheme">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="24dp">
+
+        <!-- 標題與按鈕同列；右上角直式「⋮」：偵測選項 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/debug_initial_modem_txt"
+                android:textAppearance="@android:style/TextAppearance.Material.Title"
+                android:textColor="@color/colorAccent" />
+
+            <Button
+                android:id="@+id/restore_button"
+                style="@style/CompactButton"
+                android:layout_marginStart="12dp"
+                android:text="@string/debug_button_txt" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/manual_menu"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/manual_menu_detect"
+                android:src="@drawable/ic_more_vert"
+                android:tint="@color/textColor" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/initial_modem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@android:style/TextAppearance.Material.Body1"
+            android:textColor="@color/textColor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/debug_current_modem_txt"
+            android:textAppearance="@android:style/TextAppearance.Material.Title"
+            android:textColor="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/manual_current"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@android:style/TextAppearance.Material.Body1"
+            android:textColor="@color/textColor" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/debug_swap_modem_txt"
+                android:textAppearance="@android:style/TextAppearance.Material.Title"
+                android:textColor="@color/colorAccent" />
+
+            <Button
+                android:id="@+id/manual_button"
+                style="@style/CompactButton"
+                android:layout_marginStart="12dp"
+                android:text="@string/manual_button" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/manual_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@android:style/TextAppearance.Material.Body1"
+            android:textColor="@color/textColor" />
+
+        <LinearLayout
+            android:id="@+id/manual_detect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/manual_check_compatible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/manual_check_compatible" />
+
+                <CheckBox
+                    android:id="@+id/manual_check_ignore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/manual_check_ignore" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/manual_mcc_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/manual_mcc_label"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body1"
+                    android:textColor="@color/textColor" />
+
+                <EditText
+                    android:id="@+id/manual_mcc"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:digits="0123456789 ,"
+                    android:inputType="text"
+                    android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/search_modem"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/search_modem"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp" />
+
+        <!-- modem 檔案可能上百個：清單固定高度、自己捲動 -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_marginTop="4dp"
+            android:nestedScrollingEnabled="true"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:id="@+id/manual_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+    </LinearLayout>
+</ScrollView>

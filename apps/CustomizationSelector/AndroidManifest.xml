@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    coreApp="true"
+    package="com.sonymobile.customizationselector"
+    platformBuildVersionName="4.1.0.A.0.0"
+    android:sharedUserId="android.uid.phone">
+
+    <uses-permission android:name="android.permission.REBOOT" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission android:name="com.sonymobile.permission.TRIMAREA" />
+    <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW" />
+    <uses-permission android:name="android.permission.MASTER_CLEAR" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- /dev/diag 的 group（oem_2901）由 system permission XML 授予，讀寫 modem EFS 用 -->
+    <permission android:name="com.sonymobile.customizationselector.permission.DIAG_EFS"
+        android:protectionLevel="normal" />
+    <uses-permission android:name="com.sonymobile.customizationselector.permission.DIAG_EFS" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/ic_settings_carrier_switch"
+        android:directBootAware="true"
+        android:excludeFromRecents="true"
+        android:immersive="true"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <uses-library android:name="com.sonymobile.miscta.api" android:required="false" />
+        <uses-native-library android:name="libMiscTAApi.sony.so" android:required="false" />
+
+        <activity
+            android:name="com.sonymobile.customizationselector.CustomizationSelectorActivity"
+            android:enabled="false"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.DeviceDefault.Settings">
+            <intent-filter android:priority="2">
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.sonymobile.customizationselector.ManualSwitchActivity"
+            android:configChanges="orientation"
+            android:exported="true"
+            android:icon="@drawable/ic_settings_carrier_switch"
+            android:label="@string/manual_app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="com.sonyericsson.debugmenu.ENTRY_INTENT" />
+                <category android:name="com.sonyericsson.debugmenu.ENTRY_CATEGORY" />
+            </intent-filter>
+            <!-- 設定 > 網路與網際網路 的入口 -->
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.wireless" />
+            <meta-data android:name="com.android.settings.title"
+                android:resource="@string/manual_app_name" />
+            <meta-data android:name="com.android.settings.icon"
+                android:resource="@drawable/ic_settings_carrier_switch" />
+            <meta-data android:name="com.android.settings.icon_tintable" android:value="true" />
+            <meta-data android:name="com.android.settings.order" android:value="100" />
+        </activity>
+
+        <service
+            android:name="com.sonymobile.customizationselector.CustomizationSelectorService"
+            android:exported="false" />
+        <service
+            android:name="com.sonymobile.customizationselector.DSDataSubContentJob"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver
+            android:name="com.sonymobile.customizationselector.EventReceiver"
+            android:exported="false">
+            <intent-filter android:priority="999">
+                <action android:name="android.telephony.action.CARRIER_CONFIG_CHANGED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.sonymobile.customizationselector.MasterClearReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MASTER_CLEAR_NOTIFICATION" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.sonymobile.customizationselector.NotificationReceiver"
+            android:exported="false" />
+        <receiver
+            android:name="com.sonymobile.customizationselector.StatusWidget"
+            android:exported="true"
+            android:label="@string/manual_app_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_status_info" />
+        </receiver>
+    </application>
+</manifest>
