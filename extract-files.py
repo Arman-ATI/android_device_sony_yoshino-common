@@ -71,6 +71,9 @@ blob_fixups: blob_fixups_user_type = {
      'vendor/lib/libsomc_topporsc.so', 'vendor/lib/libsomc_yummyrsc.so', 'vendor/lib/libsony_fooddetect.so',
      'vendor/lib/libsony_naruto.so', 'vendor/lib/libvideobokeh.so'): blob_fixup()
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
+    'vendor/etc/public.libraries.txt': blob_fixup()
+        .regex_replace('(?s)\\A(?!.*(?:^|\\n)libMiscTAApi\\.sony\\.so(?:\\n|\\Z))(.*?)\\n*\\Z',
+                       '\\g<1>\nlibMiscTAApi.sony.so\n'),
     'vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc': blob_fixup()
         .regex_replace('writepid /dev/cpuset/foreground/tasks', 'task_profiles ProcessCapacityHigh'),
     'vendor/etc/init/init.sony.idd.rc': blob_fixup()

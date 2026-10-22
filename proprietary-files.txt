@@ -755,8 +755,7 @@ vendor/lib64/vendor.display.color@1.0.so|cd604706cd50989b899c04a252f7f02d17996ba
 vendor/lib64/vendor.display.postproc@1.0.so|cc62ff1b3e8ff0e11b750ae59a0f851fdab50962
 
 # Public libraries
-system/etc/public.libraries-sony.txt:vendor/etc/public.libraries-sony.txt
-vendor/etc/public.libraries.txt
+vendor/etc/public.libraries.txt|85abb1e96eb34ce159c861880afd70ed07815717|c14fa13c0191b5e47354442e4dcdc0ac9ee8d44f
 
 # QMI - from FP3 - 6.A.040.4
 system/etc/permissions/privapp-permissions-qti.xml|63af86090753b778de9e936272334699923ddf0f
