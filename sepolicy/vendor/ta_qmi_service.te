@@ -14,3 +14,6 @@ allow ta_qmi_service self:capability { net_raw setgid setuid };
 
 # Allow ta_qmi_service to create self:qipcrtr_socket
 allow ta_qmi_service self:qipcrtr_socket create_socket_perms_no_ioctl;
+
+# Allow ta_qmi_service to create its AF_UNIX/socket endpoints
+allow ta_qmi_service self:socket create_socket_perms_no_ioctl;

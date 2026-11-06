@@ -8,3 +8,6 @@ allow sct_service self:capability net_raw;
 
 # Allow sct_service to create self:qipcrtr_socket
 allow sct_service self:qipcrtr_socket create_socket_perms_no_ioctl;
+
+# Allow sct_service to create its own sockets
+allow sct_service self:socket create_socket_perms_no_ioctl;
