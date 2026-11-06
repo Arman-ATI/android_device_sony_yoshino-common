@@ -17,3 +17,56 @@ genfscon debugfs /wlan0                  u:object_r:debugfs_wlan:s0
 
 # Vibrator
 genfscon sysfs /devices/soc/soc:ldo_vibrator/leds/vibrator                       u:object_r:sysfs_leds:s0
+
+# 4.19 核心的 wakeup source 節點（/sys/devices/**/wakeupN）標成 sysfs_wakeup，讓 system_suspend 依 AOSP 既有規則讀取
+# 節點路徑取自 BH904ULGAT；路徑含裝置編號，核心版本或 DT 變更時需重新列出
+genfscon sysfs /devices/soc/171c0000.slim/tasha-slim-pgd/wakeup/wakeup68 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/17300000.qcom,lpass/wakeup/wakeup11 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/18800000.qcom,icnss/wakeup/wakeup54 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/1c00000.qcom,pcie/wakeup/wakeup3 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/1d0101c.qcom,spss/wakeup/wakeup17 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/1e00000.qcom,ipa/wakeup/wakeup2 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/4080000.qcom,mss/wakeup/wakeup7 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/5c00000.qcom,ssc/wakeup/wakeup13 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-00/800f000.qcom,spmi:qcom,pm8998@0:qcom,pm8998_rtc/rtc/rtc0/wakeup27 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-00/800f000.qcom,spmi:qcom,pm8998@0:qcom,pm8998_rtc/wakeup/wakeup26 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-00/800f000.qcom,spmi:qcom,pm8998@0:qcom,power-on@800/wakeup/wakeup0 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qcom,power-on@800/wakeup/wakeup1 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qcom,qpnp-smb2/power_supply/battery/wakeup34 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qcom,qpnp-smb2/power_supply/dc/wakeup30 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qcom,qpnp-smb2/power_supply/main/wakeup32 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qcom,qpnp-smb2/power_supply/pc_port/wakeup33 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qcom,qpnp-smb2/power_supply/usb/wakeup31 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qcom,qpnp-smb2/wakeup/wakeup29 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qcom,qpnp-smb2/wakeup/wakeup35 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qcom,usb-pdphy@1700/usbpd/usbpd0/wakeup51 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qpnp,fg/power_supply/bms/wakeup52 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qpnp,fg/wakeup/wakeup53 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/a800000.ssusb/wakeup/wakeup24 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/c1b5000.i2c/i2c-7/7-0029/wakeup/wakeup63 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/ca0c000.qcom,cci/ca0c000.qcom,cci:qcom,camera@0/video4linux/video4/wakeup59 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/ca0c000.qcom,cci/ca0c000.qcom,cci:qcom,camera@1/video4linux/video5/wakeup60 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/cce0000.qcom,venus/wakeup/wakeup15 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/soc:fpc1145/wakeup/wakeup25 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/soc:gpio_keys/wakeup/wakeup57 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/soc:qcom,ipa_fws@1e08000/wakeup/wakeup9 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/soc:qcom,kgsl-hyp/wakeup/wakeup19 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/soc:qcom,smp2p_sleepstate/wakeup/wakeup21 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/soc:smp2p-lpass/wakeup/wakeup5 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/soc:smp2p-mpss/wakeup/wakeup4 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/soc/soc:smp2p-slpi/wakeup/wakeup6 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/diag/diag/wakeup22 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_aac/wakeup36 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_alac/wakeup37 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_amrnb/wakeup38 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_amrwb/wakeup39 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_amrwbplus/wakeup40 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_ape/wakeup41 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_evrc/wakeup42 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_g711alaw/wakeup43 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_g711mlaw/wakeup44 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_mp3/wakeup45 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_multi_aac/wakeup46 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_qcelp/wakeup47 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_wma/wakeup48 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_wmapro/wakeup49 u:object_r:sysfs_wakeup:s0
