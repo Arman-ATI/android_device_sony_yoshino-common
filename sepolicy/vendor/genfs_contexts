@@ -12,6 +12,9 @@ genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:
 genfscon sysfs /kernel/boot_adsp/boot    u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /kernel/boot_slpi/boot    u:object_r:sysfs_msm_subsys:s0
 
+# Qualcomm MSS SSR
+genfscon sysfs /devices/soc/4080000.qcom,mss/subsys0/name    u:object_r:sysfs_ssr:s0
+
 genfscon debugfs /rmt_storage            u:object_r:debugfs_rmt:s0
 genfscon debugfs /wlan0                  u:object_r:debugfs_wlan:s0
 
@@ -70,3 +73,17 @@ genfscon sysfs /devices/virtual/misc/msm_multi_aac/wakeup46 u:object_r:sysfs_wak
 genfscon sysfs /devices/virtual/misc/msm_qcelp/wakeup47 u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_wma/wakeup48 u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_wmapro/wakeup49 u:object_r:sysfs_wakeup:s0
+
+# subsystem name 節點（subsysN/name）標成 sysfs_ssr（與 4.4 一致），所有 domain 依 domain.te 已可讀取
+genfscon sysfs /devices/soc/17300000.qcom,lpass/subsys2/name u:object_r:sysfs_ssr:s0
+genfscon sysfs /devices/soc/1d0101c.qcom,spss/subsys5/name u:object_r:sysfs_ssr:s0
+genfscon sysfs /devices/soc/5c00000.qcom,ssc/subsys3/name u:object_r:sysfs_ssr:s0
+genfscon sysfs /devices/soc/cce0000.qcom,venus/subsys4/name u:object_r:sysfs_ssr:s0
+genfscon sysfs /devices/soc/soc:qcom,ipa_fws@1e08000/subsys1/name u:object_r:sysfs_ssr:s0
+genfscon sysfs /devices/soc/soc:qcom,kgsl-hyp/subsys6/name u:object_r:sysfs_ssr:s0
+
+# extcon 節點（cable.N/name）標成 sysfs_extcon，供 system_server 讀取（system/sepolicy/private/system_server.te 已有 r_dir_file）
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qcom,qpnp-smb2/extcon u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qcom,usb-pdphy@1700/extcon u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/soc/soc:qcom,mdss_wb_panel/extcon u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/soc/soc:qcom,msm_ext_disp/extcon u:object_r:sysfs_extcon:s0
