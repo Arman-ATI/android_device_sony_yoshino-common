@@ -23,6 +23,7 @@ type secd_credmgr_socket, file_type;
 type secd_devsec_socket, file_type;
 type startupprober_file, file_type;
 type sysfs_camera, sysfs_type, fs_type;
+type sysfs_cpubw, sysfs_type, fs_type;
 type sysfs_fpc, sysfs_type, fs_type;
 type sysfs_msm_subsys, sysfs_type, fs_type;
 type sysfs_touch_glove_mode, sysfs_type, fs_type;

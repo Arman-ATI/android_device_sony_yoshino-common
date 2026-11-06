@@ -1,6 +1,9 @@
 # Camera
 genfscon sysfs /devices/virtual/input/rgbcir_sensor/als_power_state                 u:object_r:sysfs_camera:s0
 
+# Bus-DCVS (cpu-cpu-ddr-bw devfreq, written by libperfmgr)
+genfscon sysfs /devices/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq    u:object_r:sysfs_cpubw:s0
+
 # LEDs
 genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d000    u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d300    u:object_r:sysfs_leds:s0
