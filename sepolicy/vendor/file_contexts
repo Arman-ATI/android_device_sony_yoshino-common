@@ -75,18 +75,15 @@
 /(vendor|system/vendor)/bin/init\.qcom\.msim\.sh        u:object_r:init-qcom-msim-sh_exec:s0
 
 # Sony camera devices
-/dev/sony_camera0               u:object_r:sony_camera_device:s0
-/dev/sony_camera1               u:object_r:sony_camera_device:s0
 
 # SoMC camera sockets
 /dev/socket/cammw_excal:ipc:9000                u:object_r:hal_camera_somc_socket:s0
 /dev/socket/cammw_excal:ipc:9001                u:object_r:hal_camera_somc_socket:s0
 
 # Sys files
-/sys/class/qns(/.*)?                                                                    u:object_r:qns_sysfs:s0
 /sys/devices/soc/soc:fpc1145(/.*)?                                                      u:object_r:sysfs_fpc:s0
+/sys/class/qns(/.*)?                                                                   u:object_r:qns_sysfs:s0
 /sys/devices(/platform)?/soc/[a-z0-9]+\.qcom,jpeg/video4linux/video[0-9]+/name(/.*)?    u:object_r:sysfs_graphics:s0
-/sys/kernel/boot_wlan(/.*)?                                                             u:object_r:sysfs_wifi:s0
 
 # Camera
 /sys/devices/sony_camera_[0-9]+/info                                                     u:object_r:sysfs_camera:s0
