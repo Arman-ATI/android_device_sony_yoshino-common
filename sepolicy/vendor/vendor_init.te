@@ -15,3 +15,8 @@ set_prop(vendor_init, cust_system_prop)
 
 # Allow vendor init to set secd_prop
 set_prop(vendor_init, secd_prop)
+
+# Allow vendor init to set media, video and audio properties
+set_prop(vendor_init, media_config_prop)
+set_prop(vendor_init, vendor_video_prop)
+set_prop(vendor_init, audio_prop)

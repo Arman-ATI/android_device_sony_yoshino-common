@@ -14,3 +14,6 @@ vendor.camera.sensor.            u:object_r:somc_camera_prop:s0
 vendor.keyprovd.suntory.prov     u:object_r:secd_prop:s0
 vendor.libcameralight.           u:object_r:somc_camera_prop:s0
 
+audio.safemedia.force                   u:object_r:audio_prop:s0 exact
+media.aac_51_output_enabled             u:object_r:media_config_prop:s0 exact bool
+media.stagefright.audio.deep            u:object_r:media_config_prop:s0 exact bool
