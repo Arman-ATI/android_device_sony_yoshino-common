@@ -55,6 +55,7 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_VERSION := 4.19
+TARGET_ENFORCES_QSSI := true
 TARGET_KERNEL_CONFIG += vendor/msm8998-perf_defconfig sony/yoshino.config
 TARGET_KERNEL_SOURCE := kernel/sony/msm8998
 
@@ -73,6 +74,7 @@ BOARD_ROOT_EXTRA_FOLDERS := metadata
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := msm8998
+QCOM_SOONG_NAMESPACE := hardware/qcom-caf/sdm660
 
 # Properties
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
