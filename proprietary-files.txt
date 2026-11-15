@@ -93,7 +93,7 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|d11a6abbaddbfee605c57a1a23
 # Camera
 vendor/lib/hw/camera.msm8998.so
 vendor/lib/hw/camera.qcom.so
-vendor/lib/libcameralight.so
+vendor/lib/libcameralight.so;DISABLE_CHECKELF|ac03a1fa8c3bb3155b1bd3820d86711bc84e21fe|5e2f62fc8e6e7c3ffaad3caa9654f8e675c615ee
 vendor/lib/libcammw.so
 vendor/lib/libcdsprpc.so
 vendor/lib/libchromaflash.so
@@ -696,10 +696,8 @@ vendor/etc/init/init.keyprovd.rc
 # Lights (SOMC)
 vendor/lib/liblights-core.so
 vendor/lib/libsys-utils.so
-vendor/lib/vendor.semc.hardware.light@1.0.so
 vendor/lib64/liblights-core.so
 vendor/lib64/libsys-utils.so
-vendor/lib64/vendor.semc.hardware.light@1.0.so
 
 # Listen
 vendor/lib/hw/sound_trigger.primary.msm8998.so

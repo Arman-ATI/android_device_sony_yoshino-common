@@ -24,14 +24,6 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.semc.hardware.light</name>
-        <version>1.0</version>
-        <interface>
-            <name>IExtLight</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.semc.system.idd</name>
         <version>1.0</version>
         <interface>

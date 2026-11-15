@@ -87,6 +87,11 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('writepid /dev/cpuset/camera-daemon/tasks /dev/stune/top-app/tasks', 'task_profiles CameraServiceCapacity MaxPerformance'),
     'vendor/etc/msm_irqbalance.conf': blob_fixup()
         .regex_replace('IGNORED_IRQ=19,22,39,200,203\n', 'IGNORED_IRQ=2,19,22,39,200,203,332\n'),
+    'vendor/lib/libcameralight.so': blob_fixup()
+        .remove_needed('vendor.semc.hardware.light@1.0.so')
+        .binary_regex_replace(
+            b'\xd8\xbe\x00\x00\x16\x04\x00\x00',
+            b'\xd8\xbe\x00\x00\x00\x00\x00\x00'),
     'vendor/lib/libexcal_core.so': blob_fixup()
         .binary_regex_replace(
             b'\x00\x08\x00\x00\x00\xa0\x00\x00\x00\x08\x00\x00\x00\x08\x01\x00',
@@ -97,12 +102,12 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('__gnu_Unwind_Find_exidx'),
     'vendor/lib/libznr.so': blob_fixup()
         .add_needed('liblog.so'),
-    ('vendor/lib/vendor.semc.hardware.light@1.0.so', 'vendor/lib/vendor.semc.system.idd@1.0.so',
+    ('vendor/lib/vendor.semc.system.idd@1.0.so',
      'vendor/lib/vendor.somc.hardware.camera.cacao@1.0.so', 'vendor/lib/vendor.somc.hardware.camera.cacao@2.0.so',
      'vendor/lib/vendor.somc.hardware.camera.cacao@3.0.so', 'vendor/lib/vendor.somc.hardware.camera.cacao@3.1.so',
      'vendor/lib/vendor.somc.hardware.camera.device@1.0.so', 'vendor/lib/vendor.somc.hardware.camera.provider@1.0.so',
      'vendor/lib/vendor.somc.hardware.security.secd@1.0.so', 'vendor/lib64/com.fingerprints.extension@1.0.so',
-     'vendor/lib64/vendor.semc.hardware.light@1.0.so', 'vendor/lib64/vendor.semc.system.idd@1.0.so',
+     'vendor/lib64/vendor.semc.system.idd@1.0.so',
      'vendor/lib64/vendor.somc.hardware.miscta@1.0.so', 'vendor/lib64/vendor.somc.hardware.security.secd@1.0.so'): blob_fixup()
         .add_needed('libhidlbase_shim.so'),
     ('vendor/lib/libwvhidl.so', 'vendor/lib64/libwvhidl.so'): blob_fixup()
