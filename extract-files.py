@@ -87,6 +87,10 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('writepid /dev/cpuset/camera-daemon/tasks /dev/stune/top-app/tasks', 'task_profiles CameraServiceCapacity MaxPerformance'),
     'vendor/etc/msm_irqbalance.conf': blob_fixup()
         .regex_replace('IGNORED_IRQ=19,22,39,200,203\n', 'IGNORED_IRQ=2,19,22,39,200,203,332\n'),
+    'vendor/lib/libexcal_core.so': blob_fixup()
+        .binary_regex_replace(
+            b'\x00\x08\x00\x00\x00\xa0\x00\x00\x00\x08\x00\x00\x00\x08\x01\x00',
+            b'\x00\x08\x00\x00\x00\xa0\x00\x00\x00\x08\x00\x00\x80\x24\x01\x00'),
     'vendor/lib/libmmcamera_faceproc.so': blob_fixup()
         .clear_symbol_version('__aeabi_memcpy')
         .clear_symbol_version('__aeabi_memset')

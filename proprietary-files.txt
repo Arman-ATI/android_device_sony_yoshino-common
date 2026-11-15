@@ -195,7 +195,7 @@ vendor/lib/camera/libexcal_scene_detector_plugin.so
 vendor/lib/camera/libexcal_snapshot_ctrl_plugin.so
 vendor/lib/camera/libexcal_splitter_plugin.so
 vendor/lib/camera/libexcal_stream_ctrl_plugin.so
-vendor/lib/libexcal_core.so
+vendor/lib/libexcal_core.so|1cd5e87be2254d76a0c6116917de176e2614a6c5|bf3759e68960985db1747b1f12706610ef0cba54
 vendor/lib/libexcal_pal.so
 vendor/lib/libexcal_system.so
 
