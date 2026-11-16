@@ -91,7 +91,6 @@ vendor/lib64/libbtnv.so|e5696a20000da70ac641a6163de090bc6eca929e
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|d11a6abbaddbfee605c57a1a235c1da3011ee068
 
 # Camera
-vendor/lib/hw/camera.msm8998.so
 vendor/lib/hw/camera.qcom.so
 vendor/lib/libcameralight.so;DISABLE_CHECKELF|ac03a1fa8c3bb3155b1bd3820d86711bc84e21fe|5e2f62fc8e6e7c3ffaad3caa9654f8e675c615ee
 vendor/lib/libcammw.so
