@@ -20,3 +20,6 @@ set_prop(vendor_init, secd_prop)
 set_prop(vendor_init, media_config_prop)
 set_prop(vendor_init, vendor_video_prop)
 set_prop(vendor_init, audio_prop)
+
+allow vendor_init proc_vendor_sched:dir search;
+allow vendor_init proc_vendor_sched:file w_file_perms;

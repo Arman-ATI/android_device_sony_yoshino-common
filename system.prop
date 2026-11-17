@@ -27,6 +27,8 @@ ro.qualcomm.cabl=0
 persist.vendor.dpm.feature=1
 
 # Graphics
+debug.hwui.use_hint_manager=true
+debug.sf.enable_adpf_cpu_hint=1
 persist.demo.hdmirotationlock=false
 persist.hwc.enable_vds=1
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true

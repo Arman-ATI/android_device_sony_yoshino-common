@@ -76,14 +76,14 @@ on init
     write /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us 500
     write /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us 20000
 
-    # Set boottime stune value
-    write /dev/stune/schedtune.prefer_idle 1
-    write /dev/stune/schedtune.boost 100
-
-    # set default schedTune value for foreground/top-app
-    write /dev/stune/foreground/schedtune.prefer_idle 1
-    write /dev/stune/top-app/schedtune.boost 10
-    write /dev/stune/top-app/schedtune.prefer_idle 1
+    # Hold every group at the maximum floor through boot for boot speed;
+    # boot_completed settles them to the measured configuration (ederevx).
+    write /proc/vendor_sched/ta_uclamp_min 1024
+    write /proc/vendor_sched/ta_prefer_idle 1
+    write /proc/vendor_sched/fg_uclamp_min 1024
+    write /proc/vendor_sched/fg_prefer_idle 1
+    write /proc/vendor_sched/sys_uclamp_min 1024
+    write /proc/vendor_sched/sys_prefer_idle 1
 
     # CPU is configured, re-enable thermal core control
     write /sys/module/msm_thermal/core_control/enabled 1
@@ -485,9 +485,13 @@ on property:sys.boot_completed=1
     swapon_all /vendor/etc/fstab.qcom
     write /proc/sys/vm/swappiness 100
 
-    # Set runtime stune value
-    write /dev/stune/schedtune.prefer_idle 0
-    write /dev/stune/schedtune.boost 0
+    # Settle the vendor_sched groups (values from ederevx's tuning)
+    write /proc/vendor_sched/ta_uclamp_min 1
+    write /proc/vendor_sched/fg_uclamp_min 0
+    write /proc/vendor_sched/sys_uclamp_min 0
+    write /proc/vendor_sched/ta_prefer_idle 0
+    write /proc/vendor_sched/fg_prefer_idle 0
+    write /proc/vendor_sched/sys_prefer_idle 0
 
     # Enable UFS powersaving
     write /sys/devices/soc/${ro.boot.bootdevice}/clkscale_enable 1
@@ -570,6 +574,8 @@ on charger
     start vendor.thermal-engine
 
     setprop sys.usb.configfs 1
+    write /proc/vendor_sched/sys_uclamp_min 0
+    write /proc/vendor_sched/sys_prefer_idle 0
 
 # Touch
 on property:sys.boot_completed=1 && property:vendor.smartstamina.touchreport=*

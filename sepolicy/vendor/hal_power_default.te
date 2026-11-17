@@ -1,3 +1,6 @@
+# Connect to PPS
+unix_socket_connect(hal_power_default, pps, mm-pp-daemon)
+
 # Allow hal_power_default to read power stats
 r_dir_file(hal_power_default, debugfs_wlan)
 
@@ -7,3 +10,16 @@ allow hal_power_default device_latency:chr_file rw_file_perms;
 # Allow hal_power_default to tune the bus-DCVS devfreq node
 allow hal_power_default sysfs_cpubw:dir r_dir_perms;
 allow hal_power_default sysfs_cpubw:file rw_file_perms;
+
+# To set uclamp on app threads, which carry their own MLS categories
+typeattribute hal_power_default mlstrustedsubject;
+
+# To set uclamp on the threads of ADPF hint sessions
+allow hal_power_default self:capability sys_nice;
+allow hal_power_default appdomain:process setsched;
+allow hal_power_default surfaceflinger:process setsched;
+allow hal_power_default system_server:process setsched;
+
+# To write the vendor_sched QoS, rampup and tgid type nodes
+allow hal_power_default proc_vendor_sched:dir search;
+allow hal_power_default proc_vendor_sched:file rw_file_perms;

@@ -94,3 +94,4 @@
 /dev/bd7602-i2c                               u:object_r:nfc_device:s0
 /dev/cxd224x-i2c                              u:object_r:nfc_device:s0
 /dev/pn553                                    u:object_r:nfc_device:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power-service\.pixel-libperfmgr u:object_r:hal_power_default_exec:s0
