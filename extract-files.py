@@ -51,7 +51,7 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libui_shim.so')
         .replace_needed('libqdMetaData.so', 'libqdMetaData.system.so'),
     ('vendor/bin/hw/fpc_fingerprint@2.1_HIDL-service', 'vendor/bin/thermal-engine',
-     'vendor/bin/hw/vendor.semc.hardware.secd@1.0-service', 'vendor/lib64/lib_fpc_tac_shared.so'): blob_fixup()
+     'vendor/lib64/lib_fpc_tac_shared.so'): blob_fixup()
         .replace_needed('libprotobuf-c.so', 'libprotobuf-c-idd.so'),
     'vendor/bin/hw/android.hardware.drm@1.1-service.widevine': blob_fixup()
         .replace_needed('libhidltransport.so', 'libhidlbase.so')

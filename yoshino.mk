@@ -236,7 +236,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel/power-libperfmgr \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client \
-    vendor/sony/libqdp
+    vendor/sony/libqdp \
+    vendor/sony/secd
 
 # Telephony
 PRODUCT_PACKAGES += \

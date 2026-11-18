@@ -959,7 +959,6 @@ vendor/etc/seccomp_policy/mediacodec.policy
 vendor/etc/seccomp_policy/mediaextractor.policy
 
 # Secd
-vendor/bin/hw/vendor.semc.hardware.secd@1.0-service
 vendor/etc/init/vendor.semc.hardware.secd@1.0-service.rc
 vendor/lib/libdevice_security_vendor.so
 vendor/lib/libsuntory.so
