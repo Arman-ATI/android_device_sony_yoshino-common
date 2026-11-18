@@ -561,45 +561,41 @@ vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|14751f15eba2a00f20a39d
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|63bed6edf17ef22272b448a0ed5e5c953d700129
 
-# Graphics
-vendor/lib/egl/eglSubDriverAndroid.so
-vendor/lib/egl/libEGL_adreno.so;SYMLINK=vendor/lib/libEGL_adreno.so;DISABLE_CHECKELF
-vendor/lib/egl/libGLESv1_CM_adreno.so;DISABLE_CHECKELF
-vendor/lib/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib/libGLESv2_adreno.so
-vendor/lib/egl/libQTapGLES.so;DISABLE_CHECKELF
-vendor/lib/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib/libq3dtools_adreno.so;DISABLE_CHECKELF
-vendor/lib/egl/libq3dtools_esx.so;DISABLE_CHECKELF
-vendor/lib/libC2D2.so
-vendor/lib/libCB.so;DISABLE_CHECKELF
-vendor/lib/libOpenCL.so
-vendor/lib/libRSDriver_adreno.so
-vendor/lib/libadreno_utils.so
-vendor/lib/libbccQTI.so
-vendor/lib/libc2d30_bltlib.so
-vendor/lib/libgsl.so;DISABLE_CHECKELF
-vendor/lib/libllvm-glnext.so
-vendor/lib/libllvm-qcom.so
-vendor/lib/librs_adreno.so;DISABLE_CHECKELF
-vendor/lib/librs_adreno_sha1.so
-vendor/lib64/egl/eglSubDriverAndroid.so
-vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so
-vendor/lib64/egl/libGLESv1_CM_adreno.so
-vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so
-vendor/lib64/egl/libQTapGLES.so
-vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so
-vendor/lib64/egl/libq3dtools_esx.so
-vendor/lib64/libC2D2.so
-vendor/lib64/libCB.so
-vendor/lib64/libOpenCL.so
-vendor/lib64/libRSDriver_adreno.so
-vendor/lib64/libadreno_utils.so
-vendor/lib64/libbccQTI.so
-vendor/lib64/libc2d30_bltlib.so
-vendor/lib64/libgsl.so
-vendor/lib64/libllvm-glnext.so
-vendor/lib64/libllvm-qcom.so
-vendor/lib64/librs_adreno.so
-vendor/lib64/librs_adreno_sha1.so
+# Graphics from  CAT S62 Pro Android 11
+vendor/lib/egl/eglSubDriverAndroid.so|28b215e408ee67c14ef9e9aaf5e4e4ed0a1ac7ff
+vendor/lib/egl/libEGL_adreno.so;SYMLINK=vendor/lib/libEGL_adreno.so;DISABLE_CHECKELF|5611a6caa50562757d812553642a0a45fcc12668
+vendor/lib/egl/libGLESv1_CM_adreno.so;DISABLE_CHECKELF|446279f43811de885507bdd3d6491da8f0cfd26d
+vendor/lib/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib/libGLESv2_adreno.so|9f62562aa9d2bd1f3cd2f6c12376c42e2591d805
+vendor/lib/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib/libq3dtools_adreno.so;DISABLE_CHECKELF|49c03ff3c14e17af525c66f5cf017504e689f54e
+vendor/lib/egl/libq3dtools_esx.so;DISABLE_CHECKELF|f11effc559d8e377009501cbf6b7043f3cd34a10
+vendor/lib/libC2D2.so|7ffbb30a7b99d532eaf20b4a117fd908f1acdc01
+vendor/lib/libCB.so;DISABLE_CHECKELF|233dd32c4e3004324901c0c12fd9b688b4a4f1d2
+vendor/lib/libOpenCL.so|84bf30e06f738179363c71b8ffc6864042fe4527
+vendor/lib/libVkLayer_q3dtools.so|51a73841b7ae0e638ffd37be99de81f394cabc5a
+vendor/lib/libgpudataproducer.so|468eac68a5dd89febaff544e1b7564ebce6d00f0
+vendor/lib/libadreno_utils.so|0809d1540ed6131ce6faab50b179750bc5d70b6f
+vendor/lib/libc2d30_bltlib.so|483ec30a1daf5c3d5a5bd1e63570ad6489fe3af0
+vendor/lib/libgsl.so;DISABLE_CHECKELF|f4fb2c9e7490bc48833d3121cff65226f813e81b
+vendor/lib/libllvm-glnext.so|8599f54f3ba72210dbb0ff1d8b0a34f5420d78ca
+vendor/lib/libllvm-qcom.so|349f9f97f6f1856884b0773ea5dbb67c4eb168bf
+vendor/lib/librs_adreno.so;DISABLE_CHECKELF|f21ef747165dea556d9213d024dc0dd003021fff
+vendor/lib64/egl/eglSubDriverAndroid.so|ed050550deedeead9491574a6665f30f6ec4785b
+vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so|d602670a45e49916be5e0c2c60a8f0fe3f526791
+vendor/lib64/egl/libGLESv1_CM_adreno.so|b45486353fceb47ec419ef580fdf6d2305a842ff
+vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so|17caf92e1492db6c0aa743cf07b28bfaed7524c6
+vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so|189b9c3d400c6a98c87582b8df0910530cba6d44
+vendor/lib64/egl/libq3dtools_esx.so|1305e1b5da72686813a8c11e78fc7b8332362ccf
+vendor/lib64/libC2D2.so|175115cc36fd471f9eb83af76be21b5f602b9460
+vendor/lib64/libCB.so|acc32f1bc487abeb3d934a790dcf50724c592f88
+vendor/lib64/libOpenCL.so|b11edb1001dd25079e9f197fcd3910285cba0311
+vendor/lib64/libVkLayer_q3dtools.so|cb4824976e2ee9ff4de2f0ce059a8fd8b0c69f1c
+vendor/lib64/libgpudataproducer.so|9b3d3f08047848378bd552f95220e1f2013e1b81
+vendor/lib64/libadreno_utils.so|f2b21eaf5b8aae2ad7611cbebb1e2eca15fd1f8f
+vendor/lib64/libc2d30_bltlib.so|9fe052fbb5a47b9d256c7a2ea849f86fed0b6fcf
+vendor/lib64/libgsl.so|b9b842c7585cbbf094cc131a85fc5fd0c11bb3e7
+vendor/lib64/libllvm-glnext.so|993192308ee2b90607dbd9541ede2c93e66a0ecb
+vendor/lib64/libllvm-qcom.so|e773582b89436b4b2fd7e63983a5b7ca24748cfa
+vendor/lib64/librs_adreno.so|766453d2e3a4ab4a01908b78240abaa4f1b73d21
 
 # Graphics (firmware)
 vendor/firmware/a530_pfp.fw
@@ -611,21 +607,21 @@ vendor/firmware/a540_zap.b02
 vendor/firmware/a540_zap.elf
 vendor/firmware/a540_zap.mdt
 
-# Graphics (HDR) - from mermaid - 53.1.A.3.105
-vendor/lib64/libhdr_tm.so|ac4c943ba0c9793e53fc0b4eecf78ebb90eb28bf
+# Graphics (HDR) - from  CAT S62 Pro Android 11
+vendor/lib64/libhdr_tm.so|a1b9bbad12217e6b79951774801aa54be6460fd6
 
-# Graphics (SDM) - from mermaid - 53.1.A.3.105 
-vendor/lib64/libqseed3.so|6779aaf96283e244122f4cc76cd3cb750ff14ed5
-vendor/lib64/libsdm-color.so|9bfc08c837db828cbc6a80c9c15c87bfdb62b90c
-vendor/lib64/libsdm-diag.so|db4c495e3e64ea0cbc0d079a2aa16862a9b02192
-vendor/lib64/libsdm-disp-vndapis.so|92fe3602eaaae1847965e8886d2cbef3d0a801f8
-vendor/lib64/libsdmcore.so|a388e9c7b810f771f7067ca763e00ad27dd3db79
-vendor/lib64/libsdmextension.so|e8ce23da479c3438f98d6792c367423af92b5dfc
-vendor/lib64/libsdmutils.so|c071995e8b7e24b3c3e4c111969b86d092a17c6f
-vendor/lib64/libtinyxml2_1.so|70942325afdd14eedcf11b3fbbfbc3d98f42f8dc
+# Graphics (SDM) - from  CAT S62 Pro Android 11
+vendor/lib/libsdm-disp-vndapis.so|501f1b94c95f885e1e2bfab4d5f6804456473d79
+vendor/lib64/libqseed3.so|a858c83fb38ef7acd21ea0a23f36ef22ba8c06ef
+vendor/lib64/libsdm-color.so|69cea5fdff6c3ef05a17390b9031d9e0054bc2ad|74057c3780a76cdb8199cdb5ec3ed31ecd38341b
+vendor/lib64/libsdm-diag.so|2ba98c20d05e34501a4423f55bec4da3f27711ad
+vendor/lib64/libsdm-disp-vndapis.so|80170ba42ef766a8217500e49c4943be91cf0749
+vendor/lib64/libsdmextension.so|2d7469450bfaadb304a8080e384f72601442d078
+vendor/lib64/libtinyxml2_1.so|ff32deb110acb02cb5def5f3404f9064c1276483
 
-# Graphics (Vulkan) - from mermaid - 53.1.A.3.105
-vendor/lib64/hw/vulkan.sdm660.so:vendor/lib64/hw/vulkan.msm8998.so;FIX_SONAME|f1d27c871d6997a6536e8e892eabde25662af123|083ba9a30a085f22c4d1bfe7b39044df6e80c1ae
+# Graphics (Vulkan) - from  CAT S62 Pro Android 11
+vendor/lib/hw/vulkan.adreno.so|139868cf11006199fffc109b7a207e4e7f4cbd18
+vendor/lib64/hw/vulkan.adreno.so;SYMLINK=vendor/lib64/hw/vulkan.msm8998.so|9215100009b574f71dc75272f22a499302ea121d
 
 # IDD
 vendor/bin/hw/vendor.semc.system.idd@1.0-service
@@ -743,13 +739,15 @@ system/etc/permissions/privapp-permissions-qti.xml
 system/etc/permissions/privapp-permissions-sony.xml
 system/etc/sysconfig/qti_whitelist.xml
 
-# Postprocessing - from mermaid - 53.1.A.3.105
-vendor/bin/hw/vendor.display.color@1.0-service|e8c561e3a169c3007b117515f2946f23a195a5e5
-vendor/bin/mm-pp-dpps|27ed9e9a5f6c4f547c15e396053f283211f65abb
+# Postprocessing - from  CAT S62 Pro Android 11
+vendor/bin/hw/vendor.display.color@1.0-service|a1640ca55a67e701003fa1f6f92bd127f180d2b2
+vendor/bin/mm-pp-dpps|a265b90d727a3a8716796bbfc632e0307172b3dc
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
-vendor/lib64/libdisp-aba.so|edf0d57d523b5d578263a19358e1f57f8c7bbfd1
-vendor/lib64/vendor.display.color@1.0.so|cd604706cd50989b899c04a252f7f02d17996ba9
-vendor/lib64/vendor.display.postproc@1.0.so|cc62ff1b3e8ff0e11b750ae59a0f851fdab50962
+vendor/lib64/libdisp-aba.so|c4d6c0afc8878f6bd6bb59b857ef89a498ec274c
+vendor/lib64/vendor.display.color@1.0.so|09cb45881528c6d4675754c88c108f30dd1da12a
+vendor/lib64/vendor.display.color@1.1.so|3cf0d256372bd418462326e6067b4e1213226194
+vendor/lib64/vendor.display.color@1.2.so|8184e5d3e404864b1a1518b4d4e2012a5839660b
+vendor/lib64/vendor.display.postproc@1.0.so|86ef4e868f7abb95d555a4d086a8c4193920803f
 
 # Public libraries
 vendor/etc/public.libraries.txt|85abb1e96eb34ce159c861880afd70ed07815717|c14fa13c0191b5e47354442e4dcdc0ac9ee8d44f

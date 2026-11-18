@@ -112,6 +112,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libhidlbase_shim.so'),
     ('vendor/lib/libwvhidl.so', 'vendor/lib64/libwvhidl.so'): blob_fixup()
         .add_needed('libcrypto_shim.so'),
+    'vendor/lib64/libsdm-color.so': blob_fixup()
+        .binary_regex_replace(b'/mnt/vendor/persist/display', b'/vendor/etc' + b'\x00' * 16),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
