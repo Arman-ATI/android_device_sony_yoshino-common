@@ -53,12 +53,6 @@ PRODUCT_PACKAGES += \
 
 $(call inherit-product-if-exists, vendor/sony/camera/sony-camera.mk)
 
-# Configstore
-PRODUCT_PACKAGES += \
-    disable_configstore
-
-# Cgroup and task profiles: use the system files, the legacy _28 ones mount schedtune
-
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
